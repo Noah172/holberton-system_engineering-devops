@@ -1,4 +1,4 @@
-#!/bin/env bash
+#!/usr/bin/env bash
 #script that displais 10 times 'Holberton Scool'
 i=0
 until [ $i -ge 10 ]
