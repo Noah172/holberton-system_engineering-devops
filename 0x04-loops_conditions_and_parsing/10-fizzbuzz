@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# fizz buzz problem
 x=1
 while [ $x -le 100 ]
 do
