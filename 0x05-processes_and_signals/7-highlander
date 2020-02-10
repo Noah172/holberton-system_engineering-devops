@@ -7,7 +7,6 @@ quote()
 	echo "I am invincible!!"
 }
 
-# inifinite loop
 x=0
 while [ $x -eq 0 ]
 do
