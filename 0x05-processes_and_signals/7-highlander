@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# INVINSIBLE
+trap 'quote' 15
+
+quote()
+{
+	echo "I am invincible!!"
+}
+
+# inifinite loop
+x=0
+while [ $x -eq 0 ]
+do
+	echo "To infinity and beyond"
+	sleep 2
+done
