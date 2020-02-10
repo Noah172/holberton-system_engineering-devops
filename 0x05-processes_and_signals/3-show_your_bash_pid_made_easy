@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# pring only the name and PID
+pgrep bash -l
+

@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
+# only print the bash processes
 ps auxf | grep bash
 
