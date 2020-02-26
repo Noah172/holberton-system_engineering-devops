@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 # show ip
-ifconfig | grep 'inet addr:' | awk {'print $2'} | cut -d ":" -f2
+
+ifconfig | grep -E "inet addr:" | cut -d':' -f2 | cut -d' ' -f1
