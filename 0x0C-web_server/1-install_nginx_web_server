@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+#installing NGINX in the server
+sudo apt-get update
+sudo apt -y install nginx
+#firewall
+sudo ufw allow 'Nginx HTTP'
+#messaje for the index
+echo 'Holberton School for the win!' >> /usr/share/nginx/html/index.html
+sudo /etc/init.d/nginx start
