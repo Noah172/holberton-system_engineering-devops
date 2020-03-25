@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
 #installing NGINX in the server
-sudo apt-get update
+
+sudo apt update &&
 sudo apt -y install nginx
-#firewall
+# Firewall port 80
 sudo ufw allow 'Nginx HTTP'
-#messaje for the index
-echo 'Holberton School for the win!' >> /usr/share/nginx/html/index.html
+# Index file and start
+echo "Holberton School for the win!" > /var/www/html/index.nginx-debian.html &&
 sudo /etc/init.d/nginx start
