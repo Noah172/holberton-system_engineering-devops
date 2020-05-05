@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-script that given employee ID, 
+script that given employee ID,
 returns information about his/her TODO list progress.
 """
 
@@ -10,9 +10,9 @@ if __name__ == '__main__':
     import requests
     import sys
 
-    EMPLOYEE_NAME = ""
-    NUMBER_OF_DONE_TASKS = 0
-    TOTAL_NUMBER_OF_TASKS = 0
+    EMPLOYEE = ""
+    NUMBER_TASKS = 0
+    TOTAL_TASKS = 0
     TASK_TITLE = []
 
     employee = requests.get('https://jsonplaceholder.typicode.com/users')
@@ -28,7 +28,8 @@ if __name__ == '__main__':
     for emplo in employees:
         if emplo.get('id') == eval(sys.argv[1]):
             EMPLOYEE_NAME = emplo.get('name')
-    print("Employee {} is done with tasks({}/{}):\
-          ".format(EMPLOYEE_NAME, NUMBER_OF_DONE_TASKS, TOTAL_NUMBER_OF_TASKS))
+    print("Employee {} is done with tasks({}/{}):".format(EMPLOYEE,
+                                                          NUMBER_TASKS,
+                                                          TOTAL_TASKS))
     for task in TASK_TITLE:
         print("\t {}".format(task))
