@@ -22,12 +22,12 @@ if __name__ == '__main__':
     for tas in tasks:
         if tas.get("userId") == eval(sys.argv[1]):
             if tas.get("completed") == 1:
-                NUMBER_OF_DONE_TASKS += 1
+                NUMBER_TASKS += 1
                 TASK_TITLE.append(tas.get("title"))
-            TOTAL_NUMBER_OF_TASKS += 1
+            TOTAL_TASKS += 1
     for emplo in employees:
         if emplo.get('id') == eval(sys.argv[1]):
-            EMPLOYEE_NAME = emplo.get('name')
+            EMPLOYEE = emplo.get('name')
     print("Employee {} is done with tasks({}/{}):".format(EMPLOYEE,
                                                           NUMBER_TASKS,
                                                           TOTAL_TASKS))
