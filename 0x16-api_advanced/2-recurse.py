@@ -7,7 +7,7 @@ subreddit is given print 0.
 import requests
 
 
-def recurse(subreddit, hot_list=[], after = ''):
+def recurse(subreddit, hot_list=[], after=''):
     url = "https://www.reddit.com/r/{}/hot.json?after={}".format(subreddit,
                                                                  after)
     headers = {'user-agent': 'request'}
